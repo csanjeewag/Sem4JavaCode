@@ -52,7 +52,15 @@ class BinaryTree1{
       public void Preorder(){
         this.printPreorder(root);
     }
-    
+     public int SumValue(){
+         return Sum(root);
+     }
+    private int Sum(Node1 node){
+        if(node == null)
+            return 0;
+        return node.key + Sum(node.left) + Sum(node.right);
+       
+    }
    private void insert(Node1 node, int item){
        
        if(root == null){
@@ -84,9 +92,6 @@ class BinaryTree1{
    
    private Node1 Delete(Node1 root,int key){
        if (root == null) { return null; }
- 
-       
-  
         if(root.key == key)
         { 
             // node with only one child or no child 
@@ -226,6 +231,7 @@ public class TreeInsert  {
         tree.DeleteValue(60);
         System.out.println("inorder "); 
         tree.Inorder(); 
+        System.out.println("Sum= "+tree.SumValue());
          
     } 
 }

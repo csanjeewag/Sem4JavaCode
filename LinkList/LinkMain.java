@@ -28,9 +28,7 @@ class LinkList{
         head = null;
         tail = head;
     }
-   void displayrear(){
-       System.out.println("rear "+tail.data);
-   }
+  
      public boolean isEmpty() {
         
     if(head == null){ return true;}
@@ -222,7 +220,7 @@ public class LinkMain {
         list.deletefFromIndex(2);
         list.insertRear(75);
         list.display();
-        list.displayrear();
+     
         System.out.println("Sort array////////////////////");
         
          LinkList sortlist = new LinkList();
